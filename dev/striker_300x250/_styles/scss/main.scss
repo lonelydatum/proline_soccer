@@ -4,7 +4,7 @@
 
 
 
-.frame2 {
+.frame1 {
 	// opacity: 1;
 }
 
@@ -23,6 +23,7 @@
 .ball{
 	@include pos-scale(0, 0, .5);
 	@include pos-scale(-80, 70, .5);
+	@include pos-scale(90, -70, .5);
 }
 
 .ill{
@@ -40,5 +41,6 @@
 	color: #333;
 	width: 300px;
 	height: 250px;
+	// overflow: visible;;
 }
 

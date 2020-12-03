@@ -71,7 +71,7 @@ function striker() {
 
 	// tl.reverse()
 	// tl.play();
-	TweenLite.to(".ball", .8, { x: 0, y: 0, ease: Power3.easeInOut });
+	TweenLite.to(".ball", .8, { x: 0, y: 0, ease: Power4.easeOut, delay: .3 });
 	return tl;
 }
 
