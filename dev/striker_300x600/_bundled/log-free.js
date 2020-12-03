@@ -49,6 +49,8 @@ Object.defineProperty(exports, "__esModule", {
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function player() {
+	var speed = arguments.length <= 0 || arguments[0] === undefined ? 1 : arguments[0];
+
 	var tl = new TimelineMax();
 
 	tl.add("start", 0);
@@ -61,12 +63,10 @@ function player() {
 		if (i !== total) {
 			obj = _extends({}, obj, { opacity: 0 });
 		}
-		tl.to("#player" + i, .8, obj, "start+=" + percent);
+		tl.to("#player" + i, .8 * speed, obj, "start+=" + percent);
 	}
 
-	// tl.reverse()
-	// tl.play();
-	TweenLite.to(".ball", .8, { x: 0, y: 0, ease: Power4.easeOut, delay: .3 });
+	TweenLite.to(".ball", .8 * speed, { x: 0, y: 0, ease: Power4.easeOut, delay: .3 });
 	return tl;
 }
 

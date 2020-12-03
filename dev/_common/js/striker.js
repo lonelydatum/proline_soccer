@@ -1,5 +1,5 @@
 
-function player(){
+function player(speed=1){
 	const tl = new TimelineMax()
 	
 	
@@ -13,13 +13,12 @@ function player(){
 		if(i!==total){
 			obj = {...obj, opacity:0}
 		}
-		tl.to(`#player${i}`, .8, obj, `start+=${percent}`)	
+		tl.to(`#player${i}`, .8*speed, obj, `start+=${percent}`)	
 	}
 	
 	
-	// tl.reverse()
-	// tl.play();
-	TweenLite.to(".ball", .8, {x:0, y:0, ease:Power4.easeOut, delay:.3})
+	
+	TweenLite.to(".ball", .8*speed, {x:0, y:0, ease:Power4.easeOut, delay:.3})
 	return tl
 }
 
