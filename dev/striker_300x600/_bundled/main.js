@@ -83,7 +83,7 @@ function start() {
 	var w = _commonJsCommonJs.size.w;
 	var h = _commonJsCommonJs.size.h;
 
-	tl.set(".ill", { transformOrigin: w + 'px ' + h * 2 + 'px', x: -w / 2, y: -h });
+	tl.set(".ill", { transformOrigin: w + 'px ' + h + 'px', x: -w / 2, y: -h / 2 });
 
 	(0, _commonJsStrikerJs.player)();
 	tl.from(".t1a", .1, { x: "-=200", opacity: 0 }, 1.0);
