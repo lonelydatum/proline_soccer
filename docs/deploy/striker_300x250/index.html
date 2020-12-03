@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Created: Dec 3, 11:58</title>
+<title>Created: Dec 3, 12:14</title>
 <style>#banner{opacity: 0;}</style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="ad.size" content="width=300, height=250">
@@ -26,7 +26,7 @@
 </div>
 <div class="frame frame2">
 <img src="bg2.jpg" class="bg2">
-<img src="ill.png" class="retina ill">
+<img src="ill.png" class="ill">
 <img src="phone.png" class="retina phone">
 <img src="t2.png" class="retina t2">
 <img src="cta1.png" class="retina cta1">
@@ -39,6 +39,6 @@ Wagers must be placed at an OLG authorized retailer. Go to proline.ca for the la
 </div>
 </div>
 <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_2.1.2_min.js"></script>
-<script>!function e(t,r,o){function n(i,s){if(!r[i]){if(!t[i]){var c="function"==typeof require&&require;if(!s&&c)return c(i,!0);if(a)return a(i,!0);var f=new Error("Cannot find module '"+i+"'");throw f.code="MODULE_NOT_FOUND",f}var u=r[i]={exports:{}};t[i][0].call(u.exports,function(e){var r=t[i][1][e];return n(r?r:e)},u,u.exports,e,t,r,o)}return r[i].exports}for(var a="function"==typeof require&&require,i=0;i<o.length;i++)n(o[i]);return n}({1:[function(e,t,r){"use strict";function o(){var e=new TimelineMax;return e.set(".frame2",{opacity:1}),e.from(".bg2",.2,{opacity:0}),e.from(".phone",.3,{opacity:0},"+=.3"),e.from(".ill",.3,{scale:0}),e.from(".t2",.01,{opacity:0},"+=.3"),e.from(".cta1",.01,{opacity:0},"+=1.5"),e.to(".cta1",.01,{opacity:0},"+=2"),e.from(".cta2",.2,{opacity:0},"+=.2"),e}function n(){TweenLite.defaultEase=Power3.easeOut;var e=new TimelineMax;return e.set(".frame1",{opacity:1}),e}Object.defineProperty(r,"__esModule",{value:!0});var a=document.getElementById("banner"),i={w:a.offsetWidth,h:a.offsetHeight};TweenLite.defaultEase=Power2.easeInOut,r.size=i,r.frameEnd=o,r.init=n},{}],2:[function(e,t,r){"use strict";function o(){var e=new TimelineMax;e.add("start",0);for(var t=4,r=1;t>=r;r++){var o=r/t*.17,a={x:0,y:0,ease:Power4.easeOut};r!==t&&(a=n({},a,{opacity:0})),e.to("#player"+r,.8,a,"start+="+o)}return TweenLite.to(".ball",.8,{x:0,y:0,ease:Power4.easeOut,delay:.3}),e}Object.defineProperty(r,"__esModule",{value:!0});var n=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var o in r)Object.prototype.hasOwnProperty.call(r,o)&&(e[o]=r[o])}return e};r.player=o},{}],3:[function(e,t,r){"use strict";function o(){var e=n.init(),t=n.size.w,r=n.size.h;e.set(".ill",{transformOrigin:t+"px "+2*r+"px",x:-t/2,y:-r}),a.player(),e.from(".t1a",.1,{x:"-=200",opacity:0},1),e.from(".t1b",.01,{opacity:0},"+=1"),e.add(n.frameEnd(),"+=2")}var n=e("../../_common/js/common.js"),a=e("../../_common/js/striker.js");o(),t.exports={}},{"../../_common/js/common.js":1,"../../_common/js/striker.js":2}]},{},[3]);</script>
+<script>!function e(t,r,o){function n(i,s){if(!r[i]){if(!t[i]){var c="function"==typeof require&&require;if(!s&&c)return c(i,!0);if(a)return a(i,!0);var f=new Error("Cannot find module '"+i+"'");throw f.code="MODULE_NOT_FOUND",f}var u=r[i]={exports:{}};t[i][0].call(u.exports,function(e){var r=t[i][1][e];return n(r?r:e)},u,u.exports,e,t,r,o)}return r[i].exports}for(var a="function"==typeof require&&require,i=0;i<o.length;i++)n(o[i]);return n}({1:[function(e,t,r){"use strict";function o(){var e=new TimelineMax;return e.set(".frame2",{opacity:1}),e.from(".bg2",.2,{opacity:0}),e.from(".phone",.3,{opacity:0},"+=.3"),e.from(".ill",.3,{scale:0}),e.from(".t2",.01,{opacity:0},"+=.3"),e.from(".cta1",.01,{opacity:0},"+=1.5"),e.to(".cta1",.01,{opacity:0},"+=2"),e.from(".cta2",.2,{opacity:0},"+=.2"),e}function n(){TweenLite.defaultEase=Power3.easeOut;var e=new TimelineMax;return e.set(".frame1",{opacity:1}),e}Object.defineProperty(r,"__esModule",{value:!0});var a=document.getElementById("banner"),i={w:a.offsetWidth,h:a.offsetHeight};TweenLite.defaultEase=Power2.easeInOut,r.size=i,r.frameEnd=o,r.init=n},{}],2:[function(e,t,r){"use strict";function o(){var e=new TimelineMax;e.add("start",0);for(var t=4,r=1;t>=r;r++){var o=r/t*.17,a={x:0,y:0,ease:Power4.easeOut};r!==t&&(a=n({},a,{opacity:0})),e.to("#player"+r,.8,a,"start+="+o)}return TweenLite.to(".ball",.8,{x:0,y:0,ease:Power4.easeOut,delay:.3}),e}Object.defineProperty(r,"__esModule",{value:!0});var n=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var o in r)Object.prototype.hasOwnProperty.call(r,o)&&(e[o]=r[o])}return e};r.player=o},{}],3:[function(e,t,r){"use strict";function o(){var e=n.init(),t=n.size.w,r=n.size.h;e.set(".ill",{transformOrigin:t/2+"px "+r+"px"}),a.player(),e.from(".t1a",.1,{x:"-=200",opacity:0},1),e.from(".t1b",.01,{opacity:0},"+=1"),e.add(n.frameEnd(),"+=2")}var n=e("../../_common/js/common.js"),a=e("../../_common/js/striker.js");o(),t.exports={}},{"../../_common/js/common.js":1,"../../_common/js/striker.js":2}]},{},[3]);</script>
 </body>
 </html>

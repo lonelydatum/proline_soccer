@@ -6,7 +6,7 @@ function start(){
 	
 	const tl = init()
 	const {w, h} = size
-	tl.set(".ill", {transformOrigin:`${w}px ${h*2}px`, x:-w/2, y:-h })
+	tl.set(".ill", {transformOrigin:`${w/2}px ${h}px`})
 
 	
 	player()

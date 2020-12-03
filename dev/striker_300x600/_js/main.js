@@ -1,4 +1,3 @@
-
 import {size, frameEnd, init} from '../../_common/js/common.js'
 import {player} from '../../_common/js/striker.js'
 
@@ -9,7 +8,7 @@ function start(){
 	
 	const tl = init()
 	const {w, h} = size
-	tl.set(".ill", {transformOrigin:`${w}px ${h}px`, x:-w/2, y:-h/2 })
+	tl.set(".ill", {transformOrigin:`${w/2}px ${h/2}px`, x:0, y:0 })
 
 	
 	player()
