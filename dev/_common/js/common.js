@@ -3,14 +3,14 @@ const size = {w:banner.offsetWidth, h:banner.offsetHeight}
 
 TweenLite.defaultEase = Power2.easeInOut
 
-function frameEnd(){
+function frameEnd({phone}){
 	const tl = new TimelineMax()
 
 	tl.set(".frame2", {opacity:1})
 	tl.from(".bg2", .2, {opacity:0})
 
 	
-	tl.from(".phone", .3, {opacity:0}, "+=.3")
+	tl.add(phone)
 	tl.from(".ill", .3, {scale:0})
 
 	tl.from(".t2", .01, { opacity:0}, "+=.3")

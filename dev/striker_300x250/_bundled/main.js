@@ -9,13 +9,15 @@ var size = { w: banner.offsetWidth, h: banner.offsetHeight };
 
 TweenLite.defaultEase = Power2.easeInOut;
 
-function frameEnd() {
+function frameEnd(_ref) {
+	var phone = _ref.phone;
+
 	var tl = new TimelineMax();
 
 	tl.set(".frame2", { opacity: 1 });
 	tl.from(".bg2", .2, { opacity: 0 });
 
-	tl.from(".phone", .3, { opacity: 0 }, "+=.3");
+	tl.add(phone);
 	tl.from(".ill", .3, { scale: 0 });
 
 	tl.from(".t2", .01, { opacity: 0 }, "+=.3");
@@ -89,7 +91,9 @@ function start() {
 	tl.from(".t1a", .1, { x: "-=200", opacity: 0 }, 1.0);
 	tl.from(".t1b", .01, { opacity: 0 }, "+=1");
 
-	tl.add((0, _commonJsCommonJs.frameEnd)(), "+=2");
+	var phone = new TimelineMax();
+	phone.from(".phone", .3, { y: "+=200" }, "+=.3");
+	tl.add((0, _commonJsCommonJs.frameEnd)({ phone: phone }), "+=2");
 }
 
 start();

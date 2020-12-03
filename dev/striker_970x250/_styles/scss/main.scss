@@ -1,0 +1,36 @@
+
+
+@import '../../../_common/styles/common.scss';
+
+
+
+.frame1 {
+	opacity: 0;
+}
+
+.player1{		
+	@include pos-scale-rotate(240, -130, .5, 0);
+}
+
+
+
+.ball{	
+	@include pos-scale-rotate(250, -140, .5, 0);
+}
+
+
+
+#legalBtn{	
+	@include pos(23, 182);
+	// opacity: 1;
+}
+
+#banner{	
+	width: 970px;
+	height: 250px;
+}
+
+.bgGrad{
+	height: 130px;
+	opacity: .6;
+}

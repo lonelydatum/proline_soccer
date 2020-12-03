@@ -85,14 +85,14 @@ function start() {
 	var w = _commonJsCommonJs.size.w;
 	var h = _commonJsCommonJs.size.h;
 
-	tl.set(".ill", { transformOrigin: w / 2 + 'px ' + h / 2 + 'px', x: 0, y: 0 });
+	tl.set(".ill", { transformOrigin: w * .75 + 'px ' + h + 'px', x: 0, y: 0 });
 
 	(0, _commonJsStrikerJs.player)();
-	tl.from(".t1a", .1, { x: "-=200", opacity: 0 }, 1.0);
+	tl.from(".t1a", .2, { x: "-=400", opacity: 0 }, 1.0);
 	tl.from(".t1b", .01, { opacity: 0 }, "+=1");
 
 	var phone = new TimelineMax();
-	phone.from(".phone", .3, { y: "+=100", opacity: 0 }, "+=.3");
+	phone.from(".phone", .3, { y: "+=200" }, "+=.3");
 	tl.add((0, _commonJsCommonJs.frameEnd)({ phone: phone }), "+=2");
 }
 

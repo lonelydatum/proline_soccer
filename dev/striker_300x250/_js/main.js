@@ -16,7 +16,9 @@ function start(){
 	
 	
 	
-	tl.add(frameEnd(), "+=2")
+	const phone = new TimelineMax()
+	phone.from(".phone", .3, {y:"+=200"}, "+=.3")	
+	tl.add(frameEnd({phone}), "+=2")
 
 }
 
