@@ -26,6 +26,23 @@ function frameEnd() {
 	return tl;
 }
 
+function frameEndPool() {
+	var tl = new TimelineMax();
+
+	tl.set(".frame2", { opacity: 1 });
+	tl.from(".bg2", .2, { opacity: 0 });
+
+	tl.to(".phone", .3, { y: 0, opacity: 1 }, "+=.3");
+	tl.from(".ill", .3, { scale: 0 });
+
+	tl.from(".t2", .01, { opacity: 0 }, "+=.3");
+	tl.from(".cta1", .01, { opacity: 0 }, "+=1.5");
+	tl.to([".t2", ".cta1"], .01, { opacity: 0 }, "+=2");
+	tl.from(".t3", .2, { opacity: 0 }, "+=.2");
+
+	return tl;
+}
+
 function init(id) {
 	console.log(id);
 	TweenLite.defaultEase = Power3.easeOut;
@@ -69,6 +86,7 @@ function init(id) {
 
 exports.size = size;
 exports.frameEnd = frameEnd;
+exports.frameEndPool = frameEndPool;
 exports.init = init;
 
 },{}],2:[function(require,module,exports){
@@ -95,10 +113,11 @@ function player() {
 		if (i !== total) {
 			obj = _extends({}, obj, { opacity: 0 });
 		}
+		console.log(percent);
 		tl.to("#player" + i, .8 * speed, obj, "start+=" + percent);
 	}
 
-	TweenLite.to(".ball", .8 * speed, { x: 0, y: 0, ease: Power4.easeOut, delay: .3 });
+	TweenLite.to(".ball", 1.2 * speed, { x: 0, y: 0, ease: Power4.easeOut, delay: .17 });
 	return tl;
 }
 

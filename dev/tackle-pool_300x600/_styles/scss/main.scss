@@ -1,0 +1,19 @@
+@import '../../../_common/styles/common.scss';
+@import '../../../_common/styles/dbb.scss';
+
+
+.player1{		
+	@include pos-scale-rotate(-100, 0, .5, 0);
+}
+
+
+.player2{		
+	@include pos-scale-rotate(160, 0, .5, 0);
+}
+
+
+
+.ball{	
+	@include pos-scale-rotate(-100, 0, .5, 0);
+}
+

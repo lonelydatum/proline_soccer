@@ -13,12 +13,13 @@ function player(speed=1){
 		if(i!==total){
 			obj = {...obj, opacity:0}
 		}
+		console.log(percent);
 		tl.to(`#player${i}`, .8*speed, obj, `start+=${percent}`)	
 	}
 	
 	
 	
-	TweenLite.to(".ball", .8*speed, {x:0, y:0, ease:Power4.easeOut, delay:.3})
+	TweenLite.to(".ball", 1.2*speed, {x:0, y:0, ease:Power4.easeOut, delay:.17})
 	return tl
 }
 
