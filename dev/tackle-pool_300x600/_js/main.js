@@ -17,7 +17,7 @@ function start(){
 	
 	
 	
-	tl.add(frameEndPool(), "+=2")
+	tl.add(frameEndPool(), "+=2.5")
 
 }
 

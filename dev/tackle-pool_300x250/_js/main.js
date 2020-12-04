@@ -12,7 +12,7 @@ function start(){
 	tl.from(".t1a", .1, {x:"-=60",opacity:0}, 1.0)
 	tl.from(".t1b", .01, {opacity:0}, "+=1")
 	
-	tl.add(frameEndPool(), "+=2")
+	tl.add(frameEndPool(), "+=2.5")
 
 }
 

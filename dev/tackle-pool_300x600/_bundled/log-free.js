@@ -140,7 +140,7 @@ function start() {
 	tl.from(".t1a", .1, { x: "-=300", opacity: 1 }, 1.0);
 	tl.from(".t1b", .01, { opacity: 0 }, "+=1");
 
-	tl.add((0, _commonJsCommonJs.frameEndPool)(), "+=2");
+	tl.add((0, _commonJsCommonJs.frameEndPool)(), "+=2.5");
 }
 
 start();
