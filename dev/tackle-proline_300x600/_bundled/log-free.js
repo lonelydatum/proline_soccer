@@ -9,15 +9,13 @@ var size = { w: banner.offsetWidth, h: banner.offsetHeight };
 
 TweenLite.defaultEase = Power2.easeInOut;
 
-function frameEnd(_ref) {
-	var phone = _ref.phone;
-
+function frameEnd() {
 	var tl = new TimelineMax();
 
 	tl.set(".frame2", { opacity: 1 });
 	tl.from(".bg2", .2, { opacity: 0 });
 
-	tl.add(phone);
+	tl.to(".phone", .3, { y: 0, opacity: 1 }, "+=.3");
 	tl.from(".ill", .3, { scale: 0 });
 
 	tl.from(".t2", .01, { opacity: 0 }, "+=.3");
@@ -28,10 +26,44 @@ function frameEnd(_ref) {
 	return tl;
 }
 
-function init() {
+function init(id) {
+	void 0;
 	TweenLite.defaultEase = Power3.easeOut;
 	var tl = new TimelineMax();
 	tl.set(".frame1", { opacity: 1 });
+	var w = size.w;
+	var h = size.h;
+
+	switch (id) {
+		case "970x250":
+			tl.set(".ill", { transformOrigin: w * .75 + "px " + h + "px", x: 0, y: 0 });
+			tl.set(".phone", { y: "+=200" });
+			break;
+
+		case "300x250":
+
+			tl.set(".ill", { transformOrigin: w / 2 + "px " + h + "px" });
+			tl.set(".phone", { y: 200 });
+			break;
+
+		case "300x600":
+			tl.set(".ill", { transformOrigin: w / 2 + "px " + h / 2 + "px", x: 0, y: 0 });
+			tl.set(".phone", { y: "+=100", opacity: 0 });
+			break;
+
+		case "320x50":
+			tl.set(".ill", { transformOrigin: w / 2 + "px " + h * 2 + "px", x: -w / 4, y: -h });
+			break;
+
+		case "728x90":
+			tl.set(".ill", { transformOrigin: w * .75 + "px " + h + "px", x: 0, y: 0 });
+			tl.set(".phone", { y: "+=200" });
+			break;
+
+		default:
+			tl.set(".ill", { transformOrigin: w / 2 + "px " + h + "px" });
+			break;
+	}
 	return tl;
 }
 
@@ -81,21 +113,15 @@ var _commonJsStrikerJs = require('../../_common/js/striker.js');
 
 function start() {
 
-	var tl = (0, _commonJsCommonJs.init)();
+	var tl = (0, _commonJsCommonJs.init)("300x600");
 	// return
-	var w = _commonJsCommonJs.size.w;
-	var h = _commonJsCommonJs.size.h;
-
-	tl.set(".ill", { transformOrigin: w / 2 + 'px ' + h / 2 + 'px', x: 0, y: 0 });
 
 	tl.from(".player2", 1, { x: "-=70", y: "-=40" }, 0);
 	(0, _commonJsStrikerJs.player)(1);
 	tl.from(".t1a", .1, { x: "-=300", opacity: 1 }, 1.0);
 	tl.from(".t1b", .01, { opacity: 0 }, "+=1");
 
-	var phone = new TimelineMax();
-	phone.from(".phone", .3, { y: "+=100", opacity: 0 }, "+=.3");
-	tl.add((0, _commonJsCommonJs.frameEnd)({ phone: phone }), "+=2");
+	tl.add((0, _commonJsCommonJs.frameEnd)(), "+=2");
 }
 
 start();

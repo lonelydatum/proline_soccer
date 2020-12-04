@@ -1,12 +1,8 @@
-
-
 @import '../../../_common/styles/common.scss';
+@import '../../../_common/styles/dbb.scss';
 
 
 
-.frame1 {
-	opacity: 0;
-}
 
 .player1{		
 	@include pos-scale-rotate(90, -80, .5, 0);
@@ -19,18 +15,3 @@
 }
 
 
-
-#legalBtn{	
-	@include pos(7, 548);
-	
-}
-
-#banner{	
-	width: 300px;
-	height: 600px;
-}
-
-.bgGrad{
-	height: 130px;
-	opacity: .6;
-}

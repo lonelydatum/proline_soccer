@@ -6,11 +6,7 @@ import {player} from '../../_common/js/striker.js'
 
 function start(){
 	
-	const tl = init()
-	const {w, h} = size
-	tl.set(".ill", {transformOrigin:`${w/2}px ${h*2}px`, x:-w/4, y:-h })
-
-	
+	const tl = init("320x50")
 
 	tl.set(".frame2", {opacity:1})
 	

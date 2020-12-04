@@ -228,43 +228,6 @@ sup {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 4%, transparent 52%);
 }
 
-.frame1 {
-  opacity: 0;
-}
-
-.player1 {
-  -webkit-transform: translate(90px, -80px) scale(0.5) rotate(0deg);
-  -ms-transform: translate(90px, -80px) scale(0.5) rotate(0deg);
-  transform: translate(90px, -80px) scale(0.5) rotate(0deg);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-}
-
-.ball {
-  -webkit-transform: translate(90px, -70px) scale(0.5, 0.5);
-  -ms-transform: translate(90px, -70px) scale(0.5, 0.5);
-  transform: translate(90px, -70px) scale(0.5, 0.5);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-}
-
-#legalBtn {
-  -webkit-transform: translate(7px, 548px);
-  -ms-transform: translate(7px, 548px);
-  transform: translate(7px, 548px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-}
-
 #banner {
   width: 320px;
   height: 50px;

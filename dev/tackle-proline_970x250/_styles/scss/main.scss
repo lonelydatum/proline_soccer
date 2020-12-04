@@ -1,0 +1,18 @@
+
+
+@import '../../../_common/styles/common.scss';
+@import '../../../_common/styles/big.scss';
+
+
+
+.player1{		
+	@include pos-scale-rotate(240, -40, .5, 0);
+}
+
+
+
+.ball{	
+	@include pos-scale-rotate(240, -40, .5, 0);
+}
+
+

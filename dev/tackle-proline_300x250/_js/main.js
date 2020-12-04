@@ -4,10 +4,9 @@ import {player} from '../../_common/js/striker.js'
 
 function start(){
 	
-	const tl = init()
+	const tl = init("300x250")
 	// return
-	const {w, h} = size
-	tl.set(".ill", {transformOrigin:`${w/2}px ${h}px`})
+	
 
 	tl.from(".player2", 1, {x:"-=70", y:"-=40"}, 0)
 	player(1.6)
@@ -17,9 +16,7 @@ function start(){
 	
 	
 	
-	const phone = new TimelineMax()
-	phone.from(".phone", .3, {y:"+=200"}, "+=.3")	
-	tl.add(frameEnd({phone}), "+=2")
+	tl.add(frameEnd(), "+=2")
 
 }
 

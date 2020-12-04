@@ -228,8 +228,25 @@ sup {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 4%, transparent 52%);
 }
 
-.frame1 {
-  opacity: 0;
+#legalBtn {
+  -webkit-transform: translate(23px, 182px);
+  -ms-transform: translate(23px, 182px);
+  transform: translate(23px, 182px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+#banner {
+  width: 970px;
+  height: 250px;
+}
+
+.bgGrad {
+  height: 130px;
+  opacity: .6;
 }
 
 .player1 {
@@ -252,27 +269,6 @@ sup {
   -webkit-perspective: 1000px;
   perspective: 1000px;
   position: absolute;
-}
-
-#legalBtn {
-  -webkit-transform: translate(23px, 182px);
-  -ms-transform: translate(23px, 182px);
-  transform: translate(23px, 182px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-}
-
-#banner {
-  width: 970px;
-  height: 250px;
-}
-
-.bgGrad {
-  height: 130px;
-  opacity: .6;
 }
 
 /*# sourceMappingURL=main.css.map */
